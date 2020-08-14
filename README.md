@@ -1,4 +1,4 @@
-# amazon-connect-metrics-ingestion-lambda
+# ts-commect-metrics-to-kinesis-template
 
 AWS Lambda Function to ingest contact centre metrics from Amazon Connect.
 

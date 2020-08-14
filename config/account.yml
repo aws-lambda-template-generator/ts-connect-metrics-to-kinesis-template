@@ -1,0 +1,4 @@
+REGION: ap-southeast-2
+ACCOUNT_ID: <Account ID>
+DEPLOYMENT_BUCKET: mdh-connect-lambda-code-${self:custom.env}
+

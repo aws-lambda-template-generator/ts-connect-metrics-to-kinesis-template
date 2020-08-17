@@ -1,4 +1,4 @@
-REGION: ap-southeast-2
+REGION: <AWS REGION>
 ACCOUNT_ID: <Account ID>
-DEPLOYMENT_BUCKET: mdh-connect-lambda-code-${self:custom.env}
+DEPLOYMENT_BUCKET: <Lambda Deployment Bucket>
 

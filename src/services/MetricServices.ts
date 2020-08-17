@@ -1,6 +1,7 @@
 import * as AWS from 'aws-sdk';
 import { IQueueServices } from './QueueServices';
 import { ICurrentMetrics, IGetMetricQueryParam } from '../types';
+import { START_NEXT_TOKEN_FOR_METRICS } from '../constants';
 
 export class MetricServices {
 
@@ -17,7 +18,7 @@ export class MetricServices {
   getCurrentMetricData = async(nextToken): Promise<ICurrentMetrics> => {
     const params = await this.getMetricDataParam();
 
-    if(nextToken.length) {
+    if(nextToken !== START_NEXT_TOKEN_FOR_METRICS) {
       params['NextToken'] = nextToken;
       console.log('Getting more currentMetrics as suggested by NextToken: ', nextToken);
     } else {

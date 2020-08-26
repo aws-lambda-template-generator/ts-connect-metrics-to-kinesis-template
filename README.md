@@ -44,10 +44,20 @@ We can either update Jenkinsfiles to run it in Jenkins or simply run it with ser
 
 ```bash
 # nonprod
-sls deploy --stage nonprod
+sls deploy --stage nonprod # if you have serverless installed globally (npm i -g serverless)
+npm run deploy -- --stage nonprod
 
 # prod
 sls deploy --stage prod
+npm run deploy -- --stage prod
+```
+
+To remove, run the command below:
+
+```bash
+sls remove --stage nonprod
+# or
+npm run remove -- --stage nonprod
 ```
 
 ## How to Optimise Memory Allocation
